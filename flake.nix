@@ -15,7 +15,10 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [ hello ];
+          buildInputs = with pkgs; [
+            haskell.compiler.native-bignum.ghcHEAD
+            # haskell.compiler.native-bignum.ghc982
+          ];
           packages = [
           ];
         };
